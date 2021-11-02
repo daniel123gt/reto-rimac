@@ -1,0 +1,93 @@
+@import '../../scss/theme.scss';
+@import '../../scss/breakpoints.scss';
+
+.showcase{
+    background-color: $deep-soft-gray;
+    @include desktop{
+        background-image: url('../../assets/images/background-d.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.showcase[variant="thanks"]{
+    background-color: $deep-soft-gray;
+    background-image: url('../../assets/images/showcase-thanks-m.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .showcase-contain{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        figure{
+            height: 100%;
+            img{
+                height: 100%;
+                padding-left: 25%;
+            }
+        }
+    }
+}
+.showcase-contain{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 120px;
+
+    @include desktop{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25% 40px 0 120px;
+    }
+
+    &_image{
+        &--d{
+            display: none;
+        }
+        @include desktop{
+            &--d{
+                display: block;
+            }
+            &--m{
+                display: none;
+            }
+        }
+    }
+    &_desc{
+        @include desktop{
+            margin-top: 24px;
+        }
+        span{
+            font-size: 0.625rem;
+            font-weight: 600;
+            color: $gray;
+            text-transform: uppercase;
+            @include desktop{
+                font-size: 0.75rem;
+            }
+        }
+        h1::first-line{
+            color: $gray;
+        }
+        h1{
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: $sweet-red;
+            line-height: 2.25rem;
+            padding-top: 10px;
+            @include desktop{
+                font-size: 2.25rem;
+            }
+        }
+        p{
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: $soft-gray;
+            line-height: 1.5rem;
+            padding-top: 10px;
+            @include desktop{
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

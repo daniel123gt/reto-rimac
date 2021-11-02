@@ -1,0 +1,12 @@
+@import '../../scss/theme.scss';
+@import '../../scss/breakpoints.scss';
+
+.login{
+    &_content{
+        @include desktop{
+            display: grid;
+            grid-template-columns: 45% 55%;
+            height: 100vh;
+        }
+    }
+}

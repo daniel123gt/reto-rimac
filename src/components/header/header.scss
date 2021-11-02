@@ -1,0 +1,45 @@
+@import '../../scss/breakpoints.scss';
+@import '../../scss/theme.scss';
+$paddingHeader: 16px 32px;
+$fontColorContact: #6769FF;
+
+.header{
+    width: 100%;
+    position: absolute;
+}
+.header-contain{
+    display: flex;
+    padding: $paddingHeader;
+    justify-content: space-between;
+    @include desktop{
+        padding: 24px;
+        max-width: 1072px;
+        margin: 0 auto;
+    }
+
+    &_logo{
+        figure{
+            width: 96px;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &_contact{
+        a{
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            color: $fontColorContact;
+            .icon-phone{
+                margin-right: 8px;
+            }
+        }
+    }
+}
+.header.border-button{
+    background-color: $white;
+    border-bottom: 1px solid $border-gray;
+}

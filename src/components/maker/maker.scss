@@ -1,0 +1,16 @@
+$paddingHeader: 16px 32px;
+$fontColorContact: #6769FF;
+.maker{
+    width: 100%;
+  padding-top:120px ;
+  display: flex;
+
+}
+.contain-menu{
+    display: flex;
+    padding: $paddingHeader;
+    justify-content: space-between;
+    background-color: #F7F8FC;
+    width: 30%;
+    height: 1000px;
+}

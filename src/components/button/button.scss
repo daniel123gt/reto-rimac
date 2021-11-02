@@ -1,0 +1,29 @@
+@import '../../scss/theme.scss';
+@import '../../scss/breakpoints.scss';
+
+.button{
+    width: 100%;
+    padding-top: 16px;
+    @include desktop{
+        max-width: 192px;
+        padding-top: 24px;
+    }
+    button{
+        width: 100%;
+        height: 56px;
+        border: none;
+        border-radius: 4px;
+        background-color: $sweet-red;
+        color: $white;
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.8;
+            transition: all 0.2s;
+        }
+    }
+}
